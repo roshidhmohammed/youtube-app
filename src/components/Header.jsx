@@ -2,13 +2,21 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { CiSearch } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { RxAvatar } from "react-icons/rx";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
 
 const Header = () => {
+  const dispatch = useDispatch()
+  
+  const toggleMenuHandler =() => {
+dispatch(toggleMenu())
+  }
   return (
-    <div className="  lg:px-5 grid grid-flow-col grid-cols-12  sm:gap-3   shadow-lg shadow-gray-600 items-center sm:py-0 py-2">
+    <div className="  lg:px-5 grid grid-flow-col grid-cols-12  sm:gap-3     items-center sm:py-0 py-2">
       <div className=" sm:col-span-2 col-span-3 items-center ">
-        <div className=" flex lg::gap-5 items-center">
+        <div className=" flex lg::gap-5 items-center" >
           <GiHamburgerMenu
+          onClick={()=> toggleMenuHandler()}
             size={30}
             className="hover:bg-[#454444] hover:cursor-pointer rounded-full p-1  "
           />

@@ -1,1 +1,36 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28"><polygon fill="%23f1f1f1" points="12,6 6,12 18,12"/></svg>') no-repeat center;
+    background-size: 10px;
+    height: 12px;
+    width: 12px;
+}
+
+::-webkit-scrollbar-button:vertical:end {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><polygon fill="%23f1f1f1" points="6,12 12,18 18,12"/></svg>') no-repeat center;
+    background-size: 14px;
+    height: 12px;
+    width: 12px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #0f0f0f;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: #525151;
+    height: 0px;
+}
+
+.button-list-horizontal-scroll {
+    ::-webkit-scrollbar-horizontal {
+        display: none !important;
+    }
+}
+
