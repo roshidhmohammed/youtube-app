@@ -32,7 +32,7 @@ const ButtonList = () => {
      <div onClick={()=> handleScroll('left', 100, 100)} className=" cursor-pointer">
         <IoIosArrowBack size={24}/>
       </div>
-    <div ref={scrollRef}    className='  duration-100 ease-linear delay-1000 flex justify-start gap-5 mt-3 items-center  px-2  overflow-x-scroll  [&::-webkit-scrollbar]:h-0  w-[1200px] snap-x snap-x-mandatory  button-list-horizontal-scroll'>
+    <div ref={scrollRef}    className='  duration-100 ease-linear delay-1000 flex justify-start gap-5 mt-3 items-center  px-2  overflow-x-scroll  [&::-webkit-scrollbar]:h-0   snap-x snap-x-mandatory  button-list-horizontal-scroll'>
      
       <Button name="All"/>
       <Button name="Live"/>

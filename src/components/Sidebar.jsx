@@ -17,12 +17,16 @@ import { MdOutlineFlag } from "react-icons/md";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { MdOutlineFeedback } from "react-icons/md";
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store)=> store.app.isMenuOpen)
+  const [width, setWidth]  = useState()
+
+
   if(!isMenuOpen) return null
   return (
-    <div className=" text-[#fff] text-sm min-w-[250px]  font-semibold h-screen  pl-5 py-5 overflow-y-scroll mb-80">
+    <div className="lg:block hidden text-[#fff] text-sm min-w-[250px]  font-semibold h-screen  pl-5 py-5 overflow-y-scroll mb-80">
       {/* <div className="  flex-col gap-10   items-center border-b-1 pb-2 border-gray-700  ">
         <div className="   flex gap-4 items-center hover:bg-[#2b2a2a] rounded-lg p-2 px-4 hover:cursor-pointer">
           <MdHome size={22} />

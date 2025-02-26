@@ -6,9 +6,9 @@ const MainContainer = () => {
   return (
     <div className="">
       <div className=" ">
-        <ButtonList />
+        {/* <ButtonList /> */}
       </div>
-      <div className="overflow-y-scroll h-screen pb-40">
+      <div className="overflow-y-scroll h-screen pb-40 ">
         <VideoContainer />
       </div>
     </div>

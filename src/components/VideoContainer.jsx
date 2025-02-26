@@ -14,8 +14,8 @@ const [videosData, setVideosData] = useState([])
     setVideosData(json.items)
   }
   return (
-  <div className='  mx-auto px-4 md:px-8 lg:px-12'>
-      <div className=' grid  grid-flow-row  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4   lg:gap-8 gap-0  mt-10 lg:mx-10'>
+  <div className='  mx-auto px-4'>
+      <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3  mt-10 sm:mx-10'>
       {videosData?.map((video)=> (
   
 <Link to={"/"} key={video?.id}  className=' ' >
