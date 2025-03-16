@@ -18,6 +18,7 @@ import { IoIosHelpCircleOutline } from "react-icons/io";
 import { MdOutlineFeedback } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store)=> store.app.isMenuOpen)
@@ -26,7 +27,7 @@ const Sidebar = () => {
 
   if(!isMenuOpen) return null
   return (
-    <div className="lg:block hidden text-[#fff] text-sm min-w-[250px]  font-semibold h-screen  pl-5 py-5 overflow-y-scroll mb-80">
+    <div className="lg:block hidden text-[#fff] text-sm min-w-[240px]  font-semibold h-screen  pl-3 py-5 overflow-y-scroll mb-80">
       {/* <div className="  flex-col gap-10   items-center border-b-1 pb-2 border-gray-700  ">
         <div className="   flex gap-4 items-center hover:bg-[#2b2a2a] rounded-lg p-2 px-4 hover:cursor-pointer">
           <MdHome size={22} />
@@ -42,7 +43,8 @@ const Sidebar = () => {
         </div>
       </div> */}
       <ul className="    border-b-1 pb-4 border-gray-700 mb-3 ">
-        <li className="flex gap-4 items-center hover:bg-[#2b2a2a] rounded-lg p-2 px-4 hover:cursor-pointer pb-2 mr-5"><MdHome size={22} /> Home</li>
+        <Link to="/"> <li className="flex gap-4 items-center hover:bg-[#2b2a2a] rounded-lg p-2 px-4 hover:cursor-pointer pb-2 mr-5"><MdHome size={22} /> Home</li>
+        </Link>
         <li className="flex gap-4 items-center hover:bg-[#2b2a2a] rounded-lg p-2 px-4 hover:cursor-pointer pb-2 mr-5"><SiYoutubeshorts size={22} />Shorts</li>
         <li className="flex gap-4 items-center hover:bg-[#2b2a2a] rounded-lg p-2 px-4 hover:cursor-pointer pb-2 mr-5"><MdOutlineSubscriptions size={22} />Subscriptions</li>
       </ul>
